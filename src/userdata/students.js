@@ -9,7 +9,7 @@ const participants = {
   },
   h1503837: {
     gender: "Mr",
-    lastname: "Bimassl",
+    lastname: "Muster",
     matnr: 1503837,
     name: "Markus",
     exam: true,
