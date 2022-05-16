@@ -1,5 +1,4 @@
 import { log } from "util";
-import { routes as MainFlowRoutes } from "./actions/main_flow";
 import { routes as MaterialRoute } from "./actions/materials_route";
 import { routes as ExamRoute } from "./actions/exam_route";
 import { routes as ExamPrepRoute } from "./actions/examPrep_route";
@@ -11,6 +10,7 @@ import Material from "./actions/learningMaterial";
 import GetDirections from "./actions/get-directions";
 import { BotonicInputTester } from "@botonic/react";
 const students = require("./userdata/students.js");
+import { routes as ExamRoute2 } from "./actions/exam_route_function";
 
 export function routes({ input, session }) {
   session.students = students.students;
@@ -26,11 +26,7 @@ export function routes({ input, session }) {
       ];
     }
 
-    if (
-      session.students.hasOwnProperty(input.data) === false
-      // &&
-      // session.activeStudent === undefined
-    ) {
+    if (session.students.hasOwnProperty(input.data) === false) {
       return [
         {
           text: /.*/,
@@ -67,7 +63,6 @@ export function routes({ input, session }) {
       "exam" && session.activeStudent.examMode === true)
   ) {
     console.log("you are in the ExamRoute");
-    console.log(ExamRoute);
-    return [...ExamRoute];
+    return ExamRoute2;
   }
 }

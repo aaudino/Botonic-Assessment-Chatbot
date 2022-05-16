@@ -1,7 +1,4 @@
-import BookRestaurant from "./book-restaurant";
-import GetDirections from "./get-directions";
 import NotFound from "./not-found";
-import ShowWeather from "./show-weather";
 import Start from "./start";
 import Material from "./learningMaterial";
 import ExamInfo from "./examInfo";

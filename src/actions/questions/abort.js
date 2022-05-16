@@ -7,8 +7,8 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 1:</Text>
-        <Text> This the first Question [EASY]</Text>
+        <Text>EXAM ABORT</Text>
+        <Text>You have left the Tab - Exam is over</Text>
       </>
     );
   }
