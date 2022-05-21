@@ -7,8 +7,8 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 1:</Text>
-        <Text> This the first Question [EASY]</Text>
+        <Text>Question 6:</Text>
+        <Text> This the sixth Question [EASY]</Text>
       </>
     );
   }
