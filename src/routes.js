@@ -6,7 +6,16 @@ import UnknownUser from "./actions/unknownuser";
 import { BotonicInputTester } from "@botonic/react";
 const students = require("./userdata/students.js");
 import { routes as ExamRoute } from "./actions/exam_route_function";
-import Question1E from "./actions/ExamActions/Question1E";
+import { inTime, timerInterval, timer } from "./actions/modules/timer";
+import ToLate from "./actions/ExamActions/toLate";
+import { exit } from "process";
+let timerTrigger = true;
+let cheatAttempt = false;
+document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "hidden") {
+    cheatAttempt = true;
+  }
+});
 
 export function routes({ input, session }) {
   session.students = students.students;
@@ -54,13 +63,29 @@ export function routes({ input, session }) {
     return [...ExamPrepRoute];
   }
 
-  while (
+  if (
     (session.activeStudent.interest =
       "exam" && session.activeStudent.examMode === true)
   ) {
-    let inputVar = input;
-    let sessionVar = session;
-    console.log("you are in the ExamRoute");
-    return ExamRoute(inputVar, sessionVar);
+    console.log(session.activeStudent);
+
+    if (timerTrigger) {
+      cheatAttempt = false;
+      timer(1);
+      timerTrigger = false;
+    }
+    if (inTime && !cheatAttempt) {
+      let inputVar = input;
+      let sessionVar = session;
+      console.log("you are in the ExamRoute");
+      return ExamRoute(inputVar, sessionVar);
+    } else {
+      return [
+        {
+          text: /.*/,
+          action: ToLate,
+        },
+      ];
+    }
   }
 }
