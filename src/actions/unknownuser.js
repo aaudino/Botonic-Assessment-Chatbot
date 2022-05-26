@@ -3,11 +3,6 @@ import { Text, RequestContext, Reply } from "@botonic/react";
 
 export default class extends React.Component {
   static contextType = RequestContext;
-
-  // static async botonicInit({ input, session, params, lastRoutePath }) {
-  //   session.user.username = input.data;
-  // }
-
   render() {
     return (
       <>

@@ -1,16 +1,29 @@
 import { log } from "util";
-import { routes as MaterialRoute } from "./actions/materials_route";
-import { routes as ExamPrepRoute } from "./actions/examPrep_route";
+//#######################
+//Routes
+//#######################
+import { routes as MaterialRoute } from "./routes/materials_route";
+import { routes as ExamPrepRoute } from "./routes/examPrep_route";
+import { routes as ExamRoute } from "./routes/exam_route_function";
+//#######################
+//DATA
+//#######################
+const students = require("./userdata/students.js");
+//#######################
+//Actions
+//#######################
 import Introduction from "./actions/introduction";
 import UnknownUser from "./actions/unknownuser";
 import { BotonicInputTester } from "@botonic/react";
-const students = require("./userdata/students.js");
-import { routes as ExamRoute } from "./actions/exam_route_function";
 import { inTime, timerInterval, timer } from "./actions/modules/timer";
 import ToLate from "./actions/ExamActions/toLate";
 import { exit } from "process";
+//#######################
+//VARIABLES
+//#######################
 let timerTrigger = true;
 let cheatAttempt = false;
+
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "hidden") {
     cheatAttempt = true;

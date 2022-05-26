@@ -14,9 +14,20 @@ export default class extends React.Component {
       <>
         <Text>
           Ok {this.context.session.activeStudent.gender}{" "}
-          {this.context.session.activeStudent.lastname}. Lets go! here is your
-          first Question
+          {this.context.session.activeStudent.lastname}.Please make sure that
+          you ready and understand the following instructions:
         </Text>
+        <Text>IMPORTANT:</Text>
+        <Text>
+          Please be aware that it is strictly prohibited to leave this chat - Do
+          not change the tab or minimize the window
+        </Text>
+        <Text>
+          If a cheatattempt is recognized or if you dont complete the exam
+          within 10 Minutes
+        </Text>
+        <Text>You will automatically fail the exam!</Text>
+        <Text>In order to continue please write:"understood"</Text>
       </>
     );
   }

@@ -1,58 +1,13 @@
-import Question1E from "./ExamActions/Question1E";
-import Question1H from "./ExamActions/Question1H";
-import Question2E from "./ExamActions/Question2E";
-import Question2H from "./ExamActions/Question2H";
-import Question3E from "./ExamActions/Question3E";
-import Question3H from "./ExamActions/Question3H";
-import Question4E from "./ExamActions/Question4E";
-import Question4H from "./ExamActions/Question4H";
-import Question5E from "./ExamActions/Question5E";
-import Question5H from "./ExamActions/Question5H";
-import Question6E from "./ExamActions/Question6E";
-import Question6H from "./ExamActions/Question6H";
 // import { noTabChange, checkTabChange } from "./ExamActions/tabtrack";
-import Done from "./ExamActions/Done";
+import Done from "../actions/ExamActions/Done";
 import { log } from "util";
-import { timerInterval } from "./modules/timer";
+import { timerInterval } from "../actions/modules/timer";
+import { Questions as questions } from "../userdata/questions.js";
 
 // ##############################
 // VARIABLES
 // ##############################
-const questions = {
-  0: {
-    intent: "StartExam",
-  },
-  1: {
-    intent: "GetDirections",
-    easy: Question1E,
-    hard: Question1H,
-  },
-  2: {
-    intent: "BookRestaurant",
-    easy: Question2E,
-    hard: Question2H,
-  },
-  3: {
-    intent: "BookRestaurant",
-    easy: Question3E,
-    hard: Question3H,
-  },
-  4: {
-    intent: "BookRestaurant",
-    easy: Question4E,
-    hard: Question4H,
-  },
-  5: {
-    intent: "BookRestaurant",
-    easy: Question5E,
-    hard: Question5H,
-  },
-  6: {
-    intent: "BookRestaurant",
-    easy: Question6E,
-    hard: Question6H,
-  },
-};
+
 let count = 0;
 let question;
 let difficulty;

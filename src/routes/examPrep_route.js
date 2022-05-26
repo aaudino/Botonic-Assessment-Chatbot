@@ -1,5 +1,5 @@
-import ExamInit from "./examInit";
-import ExamStart from "./examStart";
+import ExamInit from "../actions/examInit";
+import ExamStart from "../actions/examStart";
 
 export const routes = [
   {

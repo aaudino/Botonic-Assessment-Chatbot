@@ -1,10 +1,8 @@
-import NotFound from "./not-found";
-import Start from "./start";
-import Material from "./learningMaterial";
-import ExamInfo from "./examInfo";
-import Reintroduction from "./reintroduction";
-import ExamInit from "./examInit";
-import Bye from "./bye";
+import Material from "../actions/learningMaterial";
+import ExamInfo from "../actions/examInfo";
+import Reintroduction from "../actions/reintroduction";
+import ExamInit from "../actions/examInit";
+import Bye from "../actions/bye";
 
 export const routes = [
   { path: "learningMaterial", text: "materials", action: Material },

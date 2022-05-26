@@ -5,15 +5,22 @@ import { inTime, timerInterval, timer } from "../../actions/modules/timer";
 export default class extends React.Component {
   static contextType = RequestContext;
   static async botonicInit({ input, session, params, lastRoutePath }) {
+    let notification;
     clearInterval(timerInterval);
+    if (!inTime) {
+      notification = "You ran out of time";
+      return { notification };
+    } else {
+      notification = "You were caught cheating";
+      return { notification };
+    }
   }
 
   render() {
     return (
       <>
         <Text>EXAM FINISHED</Text>
-        <Text>You did not finish in Time.</Text>
-        <Text>Your submission will not be graded</Text>
+        <Text>{this.props.notification}</Text>
       </>
     );
   }
