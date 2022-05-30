@@ -67,11 +67,11 @@ export function routes(input, session) {
   // increase the score if the students answers a hard question exceptionally well!
   lastdifficulty && score >= 0.75
     ? (score += 0.15)
-    : console.log("does not apply ");
+    : console.log("No bonus points for hard question");
   // decrease the score if the students answers an easy question exceptionally well to compensate for the lack of difficulty!
   !lastdifficulty && score >= 0.75
     ? (score -= 0.15)
-    : console.log("does not apply as well");
+    : console.log("No deductions for an easy question");
 
   scores.push(score);
   console.log(scores);

@@ -23,7 +23,9 @@ import { exit } from "process";
 //#######################
 let timerTrigger = true;
 let cheatAttempt = false;
-
+//#######################
+//Eventlistener
+//#######################
 document.addEventListener("visibilitychange", function () {
   if (document.visibilityState === "hidden") {
     cheatAttempt = true;
