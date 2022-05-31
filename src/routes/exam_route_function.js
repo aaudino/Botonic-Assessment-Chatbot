@@ -45,19 +45,12 @@ export function routes(input, session) {
   }
   //Grab the confidence score array - replace unwated values ( because of overlapping intents)with zero and sort it (descending)
 
-  const confidenceScores = input.intents
-    .map((e) => {
-      if (e.label == lastquestion.intent) {
-        return e.confidence;
-      } else {
-        return 0;
-      }
-    })
-    .sort(function (a, b) {
-      return b - a;
-    });
-  // Save the Score of the last question
-  let score = confidenceScores[0];
+  let confidenceScoresFind = input.intents.find((e) => {
+    return e.label == lastquestion.intent;
+  });
+
+  console.log(confidenceScoresFind);
+  let score = confidenceScoresFind?.confidence;
   console.log(
     `current Difficulty:${difficulty} & last Difficulty ${lastdifficulty}`
   );
@@ -85,10 +78,14 @@ export function routes(input, session) {
       },
     ];
   } else {
-    console.log(lastdifficulty);
+    // console.log(lastdifficulty);
+
     console.log(scores);
-    // remove the first value -which is always 0
-    let questionsAnswered = scores.slice(1).length + 1;
+    // remove the first value -which is always undefined
+    scores.shift();
+    console.log("Here are the scores after the shift");
+    // define the number of answered questions
+    let questionsAnswered = count - 1;
     let results = scores.reduce((total, i) => {
       return total + i;
     }, 0);

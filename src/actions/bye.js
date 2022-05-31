@@ -6,7 +6,7 @@ export default class extends React.Component {
 
   static async botonicInit({ input, session, params, lastRoutePath }) {
     let byeMessage = `Alright, ${session.activeStudent.gender}
-    ${session.activeStudent.lastname} see you next time `;
+    ${session.activeStudent.lastname} see you next time! you will now be logged out! `;
     session.activeStudent.examMode = false;
     session.activeStudent = undefined;
     return { byeMessage };

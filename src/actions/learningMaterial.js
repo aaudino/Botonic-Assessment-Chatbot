@@ -14,22 +14,22 @@ export default class extends React.Component {
   render() {
     const articles = [
       {
+        name: "Divide and Conquer",
+        desc: "Introduction to Divide and Conquer",
+        url: "https://github.com/developerinsider/developer-insider-content/blob/master/POST/DSA/DandC/DandCsmall.png?raw=true",
+        pic: "https://github.com/developerinsider/developer-insider-content/blob/master/POST/DSA/DandC/DandCsmall.png?raw=true",
+      },
+      {
         name: "Object Oriented Programming",
-        desc: "A detailed explanation of how OOP works",
-        url: "https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP",
-        pic: "https://cdn.ttgtmedia.com/rms/onlineimages/whatis-object_oriented_programming.png",
+        desc: "Advantages of OOP",
+        url: "https://www.educba.com/advantages-of-oop/",
+        pic: "https://cdn.educba.com/academy/wp-content/uploads/2019/02/Advantages-of-OOP.jpg",
       },
       {
-        name: "HTTP - An Overview ",
-        desc: "",
-        url: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview",
-        pic: "https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview/fetching_a_page.png",
-      },
-      {
-        name: "What is React",
-        desc: "React and its components explained in plain english!",
-        url: "https://moralis.io/react-explained-what-is-react/",
-        pic: "https://moralis.io/wp-content/uploads/2021/09/21_06_REACTJS-4.jpg",
+        name: "C++ Basics",
+        desc: "char* vs std:string vs char[] in C++",
+        url: "https://www.geeksforgeeks.org/char-vs-stdstring-vs-char-c/",
+        pic: "https://vm.pl/assets/media/technologie/c-plus-plus/header-c-plusplus.svg",
       },
     ];
     return (

@@ -35,8 +35,9 @@ document.addEventListener("visibilitychange", function () {
 export function routes({ input, session }) {
   session.students = students.students;
 
-  while (session.activeStudent === undefined) {
+  if (session.activeStudent === undefined) {
     console.log("you are in the IntroductionRoute");
+    //Checking wheter the matriculation number of the student is stored in the students object.
     if (session.students.hasOwnProperty(input.data.toLowerCase())) {
       return [
         {
@@ -57,8 +58,12 @@ export function routes({ input, session }) {
   }
 
   if (
+    //Making sure that a student which has already completed the exam always lands in this route
     session.activeStudent.exam === true ||
+    //every input of the user should be evaluated by the bot in the material route -
+    //user should not be able to break out from this route by accident
     session.activeStudent.interest === "material" ||
+    //User should not be able to ask for materials while he or she is in the Exam
     (input.payload === "materials_route" &&
       session.activeStudent.examMode === false)
   ) {
@@ -68,9 +73,12 @@ export function routes({ input, session }) {
   }
 
   if (
-    (session.activeStudent.exam === false ||
-      session.activeStudent.interest === "exam" ||
+    // (session.activeStudent.exam === false ||
+    (session.activeStudent.interest === "exam" ||
+      //every input of the user should be evaluated by the bot in the Exam route
+      //- user should not be able to break out from this route by accident
       input.payload === "examPrep_route") &&
+    // Once the user is in exam mode we want to skip this route
     session.activeStudent.examMode === false
   ) {
     session.activeStudent.interest = "exam";

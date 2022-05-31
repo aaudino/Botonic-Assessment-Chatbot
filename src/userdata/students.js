@@ -11,9 +11,9 @@ const participants = {
     gender: "Mr",
     lastname: "Muster",
     matnr: 1503837,
-    name: "Markus",
+    name: "Maximilian",
     exam: true,
-    score: 1,
+    score: 100,
   },
 };
 

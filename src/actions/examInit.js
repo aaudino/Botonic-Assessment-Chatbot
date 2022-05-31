@@ -17,8 +17,10 @@ export default class extends React.Component {
           {this.context.session.activeStudent.lastname}. Please be aware that we
           are entering exam mode now.
         </Text>
-        <Text>If you are not ready or came here by accident:</Text>
-        <Text>Please just close the chatwindow and login again!</Text>
+        <Text>
+          If you are not ready or came here by accident:Please just close the
+          chatwindow and login again!
+        </Text>
         <Reply payload="examStart">I am ready</Reply>
       </>
     );

@@ -19,14 +19,9 @@ export default class extends React.Component {
         </Text>
         <Text>IMPORTANT:</Text>
         <Text>
-          Please be aware that it is strictly prohibited to leave this chat - Do
-          not change the tab or minimize the window
+          If you leave this tab or if you don`t complete the exam within 10
+          Minutes: you will automatically fail the exam
         </Text>
-        <Text>
-          If a cheatattempt is recognized or if you dont complete the exam
-          within 10 Minutes
-        </Text>
-        <Text>You will automatically fail the exam!</Text>
         <Text>In order to continue please write:"understood"</Text>
       </>
     );
