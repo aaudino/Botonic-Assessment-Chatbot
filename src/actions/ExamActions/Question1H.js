@@ -14,8 +14,8 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 1:</Text>
-        <Text> This the first Question [HARD]</Text>
+        <Text>Question 1❓</Text>
+        <Text>Briefly describe the divide-and-conquer paradigm.</Text>
       </>
     );
   }

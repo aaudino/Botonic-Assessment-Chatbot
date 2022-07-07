@@ -7,8 +7,8 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 2:</Text>
-        <Text> This the second Question [EASY]</Text>
+        <Text>Question 2❓</Text>
+        <Text> When does C++ create a default constructor?</Text>
       </>
     );
   }

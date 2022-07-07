@@ -36,7 +36,7 @@ export default class extends React.Component {
       <>
         <Text>
           Sure here we have a selection of articles that explain the concepts
-          discussed in class very well. Please have a look!
+          discussed in class very well. Please have a look 🤓!
         </Text>
         <Carousel>
           {articles.map((e, i) => (
@@ -50,12 +50,12 @@ export default class extends React.Component {
         </Carousel>
         <Text>
           Please take your time to read throug the articles - i will be waiting
-          here for you in the meantime!
+          here for you in the meantime 😊!
         </Text>
         <Text>Do you need additional help ?</Text>
         <Reply payload="moreHelp">Yes</Reply>
-        <Reply payload="noHelp"> No thank you </Reply>
-        <Reply payload="examPrep_route"> I want to take the Exam</Reply>
+        <Reply payload="noHelp"> No thank you 🔙 </Reply>
+        <Reply payload="examPrep_route"> I want to take the Exam 💪</Reply>
       </>
     );
   }

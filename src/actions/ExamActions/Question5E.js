@@ -7,8 +7,11 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 5:</Text>
-        <Text> This the fifth Question [EASY]</Text>
+        <Text>Question 5❓</Text>
+        <Text>
+          What is the alternative way to solve a problem that could be solved
+          through recursive functions?
+        </Text>
       </>
     );
   }

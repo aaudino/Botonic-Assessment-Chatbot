@@ -11,10 +11,11 @@ export default class extends React.Component {
     let notification;
     clearInterval(timerInterval);
     if (!inTime) {
-      notification = "You ran out of time - You will now be logged out";
+      notification = "You ran out of time ⌛ - You will now be logged out";
       return { notification };
     } else {
-      notification = "You were caught cheating - You will now be logged out ";
+      notification =
+        "You were caught cheating 🕵️ - You will now be logged out ";
       return { notification };
     }
   }

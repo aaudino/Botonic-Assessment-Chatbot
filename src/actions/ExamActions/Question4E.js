@@ -7,8 +7,10 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 4:</Text>
-        <Text> This the fourth Question [EASY]</Text>
+        <Text>Question 4❓</Text>
+        <Text>
+          What are the two different ways of specifying the length of an array?
+        </Text>
       </>
     );
   }

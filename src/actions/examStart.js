@@ -17,12 +17,12 @@ export default class extends React.Component {
           {this.context.session.activeStudent.lastname}.Please make sure that
           you ready and understand the following instructions:
         </Text>
-        <Text>IMPORTANT:</Text>
+        <Text> ❗❗IMPORTANT❗❗</Text>
         <Text>
           If you leave this tab or if you don`t complete the exam within 10
           Minutes: you will automatically fail the exam
         </Text>
-        <Text>In order to continue please write:"understood"</Text>
+        <Text>Please confirm that you want to continue</Text>
       </>
     );
   }

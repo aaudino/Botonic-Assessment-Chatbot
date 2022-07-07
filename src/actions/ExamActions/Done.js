@@ -4,7 +4,7 @@ import Students from "../../userdata/students";
 
 export default class extends React.Component {
   static contextType = RequestContext;
-  static async botonicInit({ input, session, params, lastRoutePath }) {
+  static async botonicInit({ session }) {
     let scoreNotification = `Thanks ${session.activeStudent.gender}
     ${session.activeStudent.lastname} for participating! Yo have achieved a score ${session.activeStudent.score}%`;
     session.activeStudent.examMode = false;
@@ -17,11 +17,11 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>EXAM FINISHED</Text>
-        <Text>{this.props.scoreNotification}</Text>
+        <Text>EXAM FINISHED 🏁</Text>
+        <Text>{this.props.scoreNotification} 😊</Text>
         <Text>You will now be logged out</Text>
-        <Text> If you wish to receive materials - please log in again </Text>
-        <Text>See you next Time </Text>
+        <Text> If you wish to receive materials 📚 - please log in again </Text>
+        <Text>See you next Time 👋</Text>
       </>
     );
   }

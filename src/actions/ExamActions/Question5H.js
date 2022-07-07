@@ -7,8 +7,10 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 5:</Text>
-        <Text> This the fifth Question [HARD]</Text>
+        <Text>Question 5❓</Text>
+        <Text>
+          What is the difference between a constructor and a function?
+        </Text>
       </>
     );
   }

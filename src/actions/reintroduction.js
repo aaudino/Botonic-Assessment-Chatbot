@@ -13,8 +13,8 @@ export default class extends React.Component {
           What else can I do for you {this.context.session.activeStudent.gender}{" "}
           {this.context.session.activeStudent.lastname}?
         </Text>
-        <Reply payload="materials_route"> I need Materials </Reply>
-        <Reply payload="Goodbye"> Nothing - Thank you! </Reply>
+        <Reply payload="materials_route"> I need Materials 📚</Reply>
+        <Reply payload="Goodbye"> Nothing - Thank you! 🔙</Reply>
       </>
     );
   }

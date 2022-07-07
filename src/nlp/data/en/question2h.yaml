@@ -1,0 +1,22 @@
+intent: C++Basics[H]
+
+samples:
+  - the type char[] has a  null ('\n' ) element at the very end.
+  - The programmer must provide the null terminating character in a - string of characters using type char[] and must also ensure that the array is large enough to contain the input string of characters and the null terminating character.
+  - String of characters are followed by a null statement.  type string is for example   string s;
+  - A string contains a null character at the end of the string, which makes it easily possible to get the string length. A char array can have a virtually unlimited length, therefore, its size must be declared/limited.
+  - an array of characters stores a null character at the end
+  - Character arrays will terminate at any whitespace, including spaces. Strings terminate when they encounter the new line character.
+  - The character array has an end of line character at the end of it.
+  - Type char[] may contain a null value as the last element, whereas type string will not.
+  - The variable of type string has a terminating character \0 at the end of it.
+  - the one that is type string has an extra string member. The /0 at the end.
+  - a string has variable size and function calls available, while an character array usually has a static size.
+  - a string char[] adds a null value to the end of the string.
+  - char array needs an end character signature and is made up of characters each separate from each other, a string is an object in itself, with a value that the user enters.
+  - A string type string acts as a single object, with individual char entities accessible only through specific string class functions. A char array is less robust, but allows direct access to specific char entities.
+  - an array of characters has one more element, its last element,the terminating element, or null, which doesnt exist in a variable of type string
+  - A string of characters is a specific variable type that has no extra data at the end. A string of type char[] is all the characters and a null ('\0')
+  - a string of characters will have a null character or value at the end of the string
+  - when the characters are put in a char array, there is also a null terminating character added to the end, '\0'
+  - The char[] will automatically add a null \0 character at the end of the string.

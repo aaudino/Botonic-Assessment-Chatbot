@@ -32,6 +32,10 @@ document.addEventListener("visibilitychange", function () {
   }
 });
 
+//#######################
+//MAIN ROUTE
+//#######################
+
 export function routes({ input, session }) {
   session.students = students.students;
 
@@ -93,8 +97,10 @@ export function routes({ input, session }) {
     console.log(session.activeStudent);
 
     if (timerTrigger) {
+      //reset the cheatAttempt variable before the exam starts (eventListener is always active)
       cheatAttempt = false;
-      timer(1);
+      //call the timer function that is located in "modules" directory
+      timer(10);
       timerTrigger = false;
     }
     if (inTime && !cheatAttempt) {

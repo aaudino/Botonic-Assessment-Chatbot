@@ -7,8 +7,11 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 2:</Text>
-        <Text> This the second Question [HARD]</Text>
+        <Text>Question 2❓</Text>
+        <Text>
+          What is the main difference between a string of characters that is
+          read into a variable of type string versus a variable of type char[]?
+        </Text>
       </>
     );
   }

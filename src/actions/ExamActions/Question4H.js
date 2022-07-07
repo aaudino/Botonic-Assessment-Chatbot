@@ -7,8 +7,11 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 4:</Text>
-        <Text> This the fourth Question [HARD]</Text>
+        <Text>Question 4❓</Text>
+        <Text>
+          What is the main difference between strings declared using the type
+          string versus strings declared using an array of characters?
+        </Text>
       </>
     );
   }

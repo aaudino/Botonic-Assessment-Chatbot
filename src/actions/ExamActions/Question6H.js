@@ -7,8 +7,11 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 6:</Text>
-        <Text> This the sixth Question [HARD]</Text>
+        <Text>Question 6❓</Text>
+        <Text>
+          What are the main advantages associated with object-oriented
+          programming?
+        </Text>
       </>
     );
   }

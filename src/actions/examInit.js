@@ -21,7 +21,7 @@ export default class extends React.Component {
           If you are not ready or came here by accident:Please just close the
           chatwindow and login again!
         </Text>
-        <Reply payload="examStart">I am ready</Reply>
+        <Reply payload="examStart">I am ready 💪</Reply>
       </>
     );
   }

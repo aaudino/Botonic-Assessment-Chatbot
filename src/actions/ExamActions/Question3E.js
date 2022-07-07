@@ -7,8 +7,10 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Question 3:</Text>
-        <Text> This the third Question [EASY]</Text>
+        <Text>Question 3❓</Text>
+        <Text>
+          How are overloaded functions differentiated by the compiler?
+        </Text>
       </>
     );
   }

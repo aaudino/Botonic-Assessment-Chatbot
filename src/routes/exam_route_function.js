@@ -13,8 +13,8 @@ let question;
 let difficulty;
 let lastdifficulty;
 let scores = [];
-let answer;
 let currentquestion;
+let numberOfQuestions = Object.keys(questions).length;
 
 // ##############################
 // Function
@@ -24,7 +24,7 @@ export function routes(input, session) {
   // save the difficulty of the ast question before it gets overwritten
   lastdifficulty = difficulty;
   let lastquestion = questions[count - 1];
-  count < 7
+  count < numberOfQuestions
     ? (currentquestion = questions[count])
     : (currentquestion = lastquestion);
 
@@ -36,19 +36,18 @@ export function routes(input, session) {
   if (count <= 1) {
     let randomizer = Math.random();
     randomizer <= 0.5
-      ? ((question = currentquestion.easy), (difficulty = false))
-      : ((question = currentquestion.hard), (difficulty = true));
+      ? ((question = currentquestion.easy), (difficulty = 0))
+      : ((question = currentquestion.hard), (difficulty = 1));
   } else {
-    scores[scores.length - 1] >= 0.65
-      ? ((question = currentquestion.hard), (difficulty = true))
-      : ((question = currentquestion.easy), (difficulty = false));
+    scores[scores.length - 1] >= 0.75
+      ? ((question = currentquestion.hard), (difficulty = 1))
+      : ((question = currentquestion.easy), (difficulty = 0));
   }
-  //Grab the confidence score array - replace unwated values ( because of overlapping intents)with zero and sort it (descending)
+  //Grab the confidence score array in the intents array which is a property of the input object
 
   let confidenceScoresFind = input.intents.find((e) => {
-    return e.label == lastquestion.intent;
+    return e.label == lastquestion.intents[difficulty];
   });
-
   console.log(confidenceScoresFind);
   let score = confidenceScoresFind?.confidence;
   console.log(
@@ -69,7 +68,7 @@ export function routes(input, session) {
   scores.push(score);
   console.log(scores);
 
-  if (count < 7) {
+  if (count < numberOfQuestions) {
     return [
       {
         path: `${question}`,
@@ -78,8 +77,6 @@ export function routes(input, session) {
       },
     ];
   } else {
-    // console.log(lastdifficulty);
-
     console.log(scores);
     // remove the first value -which is always undefined
     scores.shift();

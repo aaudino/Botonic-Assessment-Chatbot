@@ -14,7 +14,7 @@ export default class extends React.Component {
           {this.context.session.activeStudent.gender}{" "}
           {this.context.session.activeStudent.lastname}. You have got a Score of{" "}
           {this.context.session.activeStudent.score}
-          <Reply payload="restart">Take me back</Reply>
+          <Reply payload="restart">Take me back 🔙</Reply>
         </Text>
       </>
     );

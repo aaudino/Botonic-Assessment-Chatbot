@@ -16,10 +16,10 @@ export default class extends React.Component {
         <Text>
           Hi {this.context.session.activeStudent.gender}{" "}
           {this.context.session.activeStudent.lastname}, pleasure to meet you!
-          How can I help you today?
+          How can I help you today 😊 ?
         </Text>
-        <Reply payload="materials_route"> I need Materials </Reply>
-        <Reply payload="examPrep_route"> I want to take the Exam</Reply>
+        <Reply payload="materials_route"> I need Materials 📚 </Reply>
+        <Reply payload="examPrep_route"> I want to take the Exam 💪 </Reply>
       </>
     );
   }
